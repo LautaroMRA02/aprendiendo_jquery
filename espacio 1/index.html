@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <section>
+        <h3>Getting started with jquery</h3>
+        <p id="cereal">block text with a <b>id</b> cereal.</p>
+        <p class="uncycle">texto 1<b> tip</b>.</p>
+        <p class="uncycle">texto 2<b> tip</b>.</p>
+        <button id="test"data-iddelete="cereal">Click Me!</button>
+    </section>
+    <script>
+        $(document).ready(function(){
+            console.log($('#test').data())
+            $("button").click(function(e){
+                $("#"+e.target.dataset.iddelete).hide();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+    <style>
+        section{
+            background-color: whitesmoke;
+            border: 0.5px grey solid;
+            padding: 8px;
+            width: 50px;
+        }
+        article{
+        }
+    </style>
+    <section>
+        <button>X</button>
+        <article><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi doloremque cumque minus quo architecto quod, quam vitae voluptatibus sapiente deserunt est dolores natus nulla consectetur temporibus blanditiis, molestiae perspiciatis! Atque?</p></article>
+    </section>
+    <script>
+        $('article').hide()
+        $('button').on({
+            "click":function(){
+                $("section")
+                .animate({width:"90%",height:"300px"},1000,function(){$("article").fadeIn()});
+                
+                $('button')
+                .animate({opacity:.1},100)
+                .animate({marginLeft:"95%",},900)
+                .animate({opacity:1},100)
+            },
+        })
+    </script>
+</body>
+</html>
